@@ -7,7 +7,7 @@ Bienvenue dans mon portfolio créé avec React.js et Node/Express.js ! Ce projet
 
 ### Frontend:
 
-**React.js** : Une bibliothèque JavaScript pour construire des interfaces utilisateur interactives.
+**React.js** : Une bibliothèque JavaScript coté client, pour développer des interfaces visuelles interactives.
 
 **HTML/CSS** : Utilisé pour la structure et le style de l'application.
 
@@ -18,9 +18,14 @@ Bienvenue dans mon portfolio créé avec React.js et Node/Express.js ! Ce projet
 
 **Node.js** : Un environnement d'exécution JavaScript côté serveur.
 
-**Express.js** : Un framework web pour Node.js, utilisé pour créer des API RESTful et gérer les routes.
+**Express.js** : Un framework javaScript, utilisé pour créer des API RESTful et gérer les routes.
 
-**MongoDB** : Une base de données NoSQL utilisée pour stocker les articles.
+**MongoDB** : Une base de données NoSQL utilisée pour stocker les articles données das le cloud.
+
+
+### Hébergement 
+
+**Heroku** :un service d’hébergement dans le cloud pour déployer et publier le site web.
 
 
 ## Fonctionnalités
