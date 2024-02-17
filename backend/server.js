@@ -1,7 +1,7 @@
 //----Je crée un serveur HTTP en utilisant le module "http" et l'application express "app" (importé depuis le fichier app.js)----//
 
 const http = require("http");
-const app = require("./app"); 
+const app = require("./app.js"); 
 
 //je crée une constante "normalizePort" qui renvoie un port valide, qu'il soit fourni sous la forme d'un numéro ou d'une chaîne ;
 const normalizePort = (val) => {
