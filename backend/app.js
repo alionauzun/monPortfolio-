@@ -12,7 +12,7 @@ const postsRoutes = require('./routes/posts');
 const path = require('path');
 
 // connexion à la base de données MongoDB avec mongoose
-mongoose.connect("mongodb+srv://aliona:Oignies11@atlascluster.wvmjntm.mongodb.net/test?retryWrites=true&w=majority",
+mongoose.connect("mongodb+srv://aliona:Oignies11@atlascluster.wvmjntm.mongodb.net/blog?retryWrites=true&w=majority",
     { useNewUrlParser: true,
         useUnifiedTopology: true })
         .then(() => console.log('Connexion à MongoDB réussie !'))
