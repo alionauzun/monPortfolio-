@@ -23,7 +23,7 @@ export default function Banner() {
 //-----------------Effet de texte dynamique pour le mot MERN-----------------//
     useEffect(() => {
         const dynamicText = document.querySelector('p span');
-        const mernWords = ["MongoDB", "Express.js", "React", "Node.js"];
+        const mernWords = ["MongoDB", "Express.js", "React.js", "Node.js"];
 
         let wordIndex = 0;
         let charIndex = 0;
@@ -184,14 +184,14 @@ const StyledBanner = styled.div`
                     border: 1px solid #765fe8;
                     background: #765fe8;
                     color: #fff;
-                    padding: 10px 30px;
-                    border-radius: 15px;
+                    padding: 10px 40px;
+                    border-radius: 10px;
                     cursor: pointer;
                     box-shadow: 0 0 10px #765fe8;
                     transition: all 0.3s ease-in-out;
                     &:hover {
                         Box-shadow: 0 0 12px #765fe8;
-                        padding: 11px 31px;
+                        padding: 11px 41px;
                     }
                 }
                 .buttonPortfolio {
@@ -214,6 +214,7 @@ const StyledBanner = styled.div`
     }
     .image img {
         max-width: 570px;
+        filter: blur(1.5rem);
     }
     .social-icons {
         display: flex;
@@ -222,7 +223,6 @@ const StyledBanner = styled.div`
         bottom: 20px;
 
         div{
-        svg {
             font-size: 32px;
             color: #BCBCC8;
             cursor: pointer;
@@ -232,7 +232,6 @@ const StyledBanner = styled.div`
                 color: #765fe8;
                 filter: drop-shadow(1px 1px 1px #765fe8);
                 }
-            }
         }
     }
 `;
