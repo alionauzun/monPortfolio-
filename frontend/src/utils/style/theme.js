@@ -1,7 +1,7 @@
 //-----------------Fichier pour gérer les thèmes et les langues-----------------//
 import flagUK from '../../assets/flag-of-uk.png';
 import flagFR from '../../assets/flag-of-france.png';
-import audio from '../../assets/audio.mp3';
+// import audio from '../../assets/audio.mp3';
 
 
 let currentMode = 'light'; // Par défaut, le mode est clair
@@ -18,7 +18,7 @@ function stopMusic() {
 
 function playMusic() {
     const audioPlayer = document.querySelector('.audio-player');
-    audioPlayer.src = audio;
+    // audioPlayer.src = audio;
     audioPlayer.play();
     audioPlayer.loop = true;
     isMusicPlaying = true;

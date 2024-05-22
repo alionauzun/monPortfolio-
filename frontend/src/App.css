@@ -1,12 +1,27 @@
 body {
   margin: 0;
   font-family: 'Avenir Next';
+  background-color: #000533;
+  /* background-color: #e8f7ff; */
+  /* #D7D3EA */
 }
 
 #root {
   max-width: 1920px;
   margin: 0;
 }
+/* ici sont les directives tailwindcss */
+
+/* @keyframes appearLetterByLetter {
+  0% {
+       opacity: 0;
+       ransform: perspective(500px) translate3d(-35px, -40px, -150px) rotate3d(1, -1, 0, 35deg);
+       }
+   100%{
+       opacity: 1;
+       transform: perspective(500px) translate3d(0, 0, 0);
+       }
+} */
 
 /* .logo {
   height: 6em;
@@ -21,14 +36,6 @@ body {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 
 @media (prefers-reduced-motion: no-preference) {
   a:nth-of-type(2) .logo {

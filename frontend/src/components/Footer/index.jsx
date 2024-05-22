@@ -1,9 +1,7 @@
 import styled from "styled-components";
 import colors from "../../utils/style/colors";
-import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram, FaGithub } from 'react-icons/fa';
 import { RiMapPinLine } from "react-icons/ri";
 import { BsTelephone, BsEnvelope } from "react-icons/bs";
-
 
 export default function Footer() {
     return (
@@ -24,23 +22,6 @@ export default function Footer() {
                     <p><BsTelephone /> +33 61 33 39 498</p>
                     <p><BsEnvelope />aliona-balti@outlook.fr</p>
                 </div>
-                <div className="social-icons">
-                            <div>
-                            <FaLinkedin />
-                            </div>
-                            <div>
-                            <FaInstagram />
-                            </div>
-                            <div>
-                            <FaFacebook />
-                            </div>
-                            <div>
-                            <FaTwitter />
-                            </div>
-                            <div>
-                            <FaGithub />
-                            </div>
-                </div>
             </div>
 
         </StyledFooter>
@@ -56,10 +37,9 @@ const StyledFooter = styled.footer`
         display: flex;
         justify-content: space-between;
         padding: 20px 50px;
-        border-top: 1px solid #dddddd;
         margin-top: 150px;
-        background: linear-gradient(180deg, rgba(118,95,232,1) 0%, rgba(52,40,112,1) 90%);
-        color: white;
+        background-color: #00010b;
+        color: #f4f4f8;
         font-family: 'Avenir Next', sans-serif;
 
         @media (max-width: 768px) {
@@ -104,20 +84,7 @@ const StyledFooter = styled.footer`
             }
         }
 
-        .social-icons {
-            display: flex;
-            gap: 20px;
-            margin-top: 24px;
-            div {
-                font-size: 30px;
-                cursor: pointer;
-                transition: 0.3s;
-                &:hover {
-                    color: ${colors.tertiary};
-                }
-            }
-        }
-        
+
         .footerContact{
             width: 25%;
 

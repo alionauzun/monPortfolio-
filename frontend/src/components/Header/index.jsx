@@ -3,13 +3,14 @@ import styled from 'styled-components';
 import { Link } from "react-router-dom";
 import Logo from '../../assets/logo.svg';
 import { BsMoonStarsFill } from "react-icons/bs";
-import { MdSunny, MdMusicNote, MdMusicOff } from "react-icons/md";
+import { TiAdjustBrightness } from "react-icons/ti";
+import { MdMusicNote, MdMusicOff } from "react-icons/md";
 import { toggleMusic, toggleDarkMode, toggleLanguage } from '../../utils/style/theme.js';
 import flagUK from '../../assets/flag-of-uk.png';
 import flagFR from '../../assets/flag-of-france.png';
 import { useState } from 'react'; 
 
-// import colors from '../../utils/style/colors.js'
+import colors from '../../utils/style/colors.js'
 
 export default function Header() {
       const [isMusicPlaying, setIsMusicPlaying] = useState(true); // Utilisez useState pour gérer l'état de la musique
@@ -18,14 +19,88 @@ export default function Header() {
 
     return (
         <StyledHeader>
-            <StyledLink to="/">
+            <StyledLink className="logo" to="/">
                 <img src={Logo} alt="logo" />
             </StyledLink>
             <nav>
-                <StyledLink to="/">Accueil</StyledLink>
-                <StyledLink to="/portfolio">Portfolio</StyledLink>
-                <StyledLink to="/blog">Blog</StyledLink>
-                <StyledLink to="/contact">Contact</StyledLink>
+                  <StyledLink to="/">
+                        <span className="span-mother">
+                              <span>A</span>
+                              <span>c</span>
+                              <span>c</span>
+                              <span>u</span>
+                              <span>e</span>
+                              <span>i</span>
+                              <span>l</span>
+                        </span>
+                        <span className="span-mother2">
+                              <span>A</span>
+                              <span>c</span>
+                              <span>c</span>
+                              <span>u</span>
+                              <span>e</span>
+                              <span>i</span>
+                              <span>l</span>
+                        </span>
+                  </StyledLink>
+                  <StyledLink to="/portfolio">
+                        <span className="span-mother">
+                              <span>P</span>
+                              <span>o</span>
+                              <span>r</span>
+                              <span>t</span>
+                              <span>f</span>
+                              <span>o</span>
+                              <span>l</span>
+                              <span>i</span>
+                              <span>o</span>
+                        </span>
+                        <span className="span-mother2">
+                              <span>P</span>
+                              <span>o</span>
+                              <span>r</span>
+                              <span>t</span>
+                              <span>f</span>
+                              <span>o</span>
+                              <span>l</span>
+                              <span>i</span>
+                              <span>o</span>
+                        </span>
+                  </StyledLink>
+                  <StyledLink to="/blog">
+                        <span className="span-mother">
+                              <span>B</span>
+                              <span>l</span>
+                              <span>o</span>
+                              <span>g</span>
+                        </span>
+                        <span className="span-mother2">
+                              <span>B</span>
+                              <span>l</span>
+                              <span>o</span>
+                              <span>g</span>
+                        </span>
+                  </StyledLink>
+                  <StyledLink to="/contact">
+                        <span className="span-mother">
+                              <span>C</span>
+                              <span>o</span>
+                              <span>n</span>
+                              <span>t</span>
+                              <span>a</span>
+                              <span>c</span>
+                              <span>t</span>
+                        </span>
+                        <span className="span-mother2">
+                              <span>C</span>
+                              <span>o</span>
+                              <span>n</span>
+                              <span>t</span>
+                              <span>a</span>
+                              <span>c</span>
+                              <span>t</span>
+                        </span>
+                  </StyledLink>
             </nav>
             <div>
                 <div>
@@ -34,7 +109,7 @@ export default function Header() {
                         <audio className='audio-player' src='music.mp3' />
                     </button>
                     <button className="buttonMode" onClick={() => { toggleDarkMode(); setIsDarkMode(!isDarkMode); }}>
-                        {isDarkMode ?  <BsMoonStarsFill />: <MdSunny/> }
+                        {isDarkMode ?  <BsMoonStarsFill />: <TiAdjustBrightness/> }
                     </button>
                     
                     <button className='buttonLanguage' onClick={() => { toggleLanguage(); setIsFrench(!isFrench); }}>
@@ -50,17 +125,24 @@ export default function Header() {
 
 const StyledHeader = styled.header`
       font-family: 'Avenir Next', sans-serif;
-      height: 90px;
-      margin-bottom: 100px;
+      height: 75px;
       display: flex;
       flex-direction: row;
       align-items: center;
+      padding: 20px 0;
       justify-content: space-between;
-      background: linear-gradient(180deg, rgba(52,40,112,1) 0%, rgba(118,95,232,1) 60%);
+      // position: relative;
 
       @media (max-width: 768px) {
             width: 95%;
       }
+      .logo {
+            padding: 18px 20px;
+            width: 20%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+      
       img {
             width: 180px;
             display: flex;
@@ -71,30 +153,37 @@ const StyledHeader = styled.header`
                   height: 130px;
             }
       }
+}
+      nav {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+      }
 
       div {
             display: flex;
             flex-direction: row;
             margin-right: 16px;
+            
             button {
                   background: none;
                   border: none;
                   margin: 10px;
+                  margin-bottom: 0;
                   outline: none;
                   cursor: pointer;
 
                   svg {
-                        color: #E9E9ED;
+                        color:#BCBCC8;    
                         font-size: 20px;
-
                         &:hover {
-                              color: #0F0A2B;
+                              color: ${colors.quaternary};
                         }
                   }
             }
             .buttonMusic{
                   svg {
-                        font-size: 24px;
+                        font-size: 20px;
                   }
             }
 
@@ -103,7 +192,7 @@ const StyledHeader = styled.header`
                   flex-direction: row;
                   align-items: center;
                   justify-content: space-between;
-                  border: 1px solid #E9E9ED;
+                  border: 1px solid ${colors.tertiary};
                   border-radius: 20px;
                   padding: 4px 10px 4px 4px;
 
@@ -114,16 +203,13 @@ const StyledHeader = styled.header`
                   }
 
                   p {
-                        color: #E9E9ED;
+                        color: #fff;
                         margin: 0;
                         margin-left: 5px;
                   }
 
                   &:hover {
                         border: 1px solid #0F0A2B;
-                        p {
-                              color: #0F0A2B;
-                        }
                   }
 
             }
@@ -132,23 +218,86 @@ const StyledHeader = styled.header`
 
 const StyledLink = styled(Link)`
       text-decoration: none;
-      color: #E9E9ED;
-      font-size: 20px;
-      margin-right: 40px;
-      margin-left: 40px;
-      outline: none;
+      width: 95.02px;
+      height: 42.66px;
+      font: 400 19px / 1.1 'Avenir Next', sans-serif;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
-      &:hover {
-            color: #0F0A2B;
-      }
-
-      &:active {
-            color: #0F0A2B;
-      }
-
-      @media (max-width: 768px) {
-            margin: 10px;
-            text-transform: uppercase;
-            font-size: 14px;
-      }
-`
+      .span-mother {
+            display: flex;
+            overflow: hidden;
+          }
+        
+          &:hover .span-mother {
+            position: absolute;
+          }
+        
+          &:hover .span-mother span {
+            transform: translateY(1.2em);
+          }
+        
+          .span-mother span:nth-child(1) {
+            transition: 0.2s;
+          }
+        
+          .span-mother span:nth-child(2) {
+            transition: 0.3s;
+          }
+        
+          .span-mother span:nth-child(3) {
+            transition: 0.4s;
+          }
+        
+          .span-mother span:nth-child(4) {
+            transition: 0.5s;
+          }
+        
+          .span-mother span:nth-child(5) {
+            transition: 0.6s;
+          }
+        
+          .span-mother span:nth-child(6) {
+            transition: 0.7s;
+          }
+        
+          .span-mother2 {
+            display: flex;
+            position: absolute;
+            overflow: hidden;
+          }
+        
+          .span-mother2 span {
+            transform: translateY(-1.2em);
+          }
+        
+          &:hover .span-mother2 span {
+            transform: translateY(0);
+          }
+        
+          .span-mother2 span {
+            transition: 0.2s;
+          }
+        
+          .span-mother2 span:nth-child(2) {
+            transition: 0.3s;
+          }
+        
+          .span-mother2 span:nth-child(3) {
+            transition: 0.4s;
+          }
+        
+          .span-mother2 span:nth-child(4) {
+            transition: 0.5s;
+          }
+        
+          .span-mother2 span:nth-child(5) {
+            transition: 0.6s;
+          }
+        
+          .span-mother2 span:nth-child(6) {
+            transition: 0.7s;
+          }
+        `;

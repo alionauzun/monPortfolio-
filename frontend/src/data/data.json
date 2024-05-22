@@ -1,0 +1,65 @@
+[
+    {
+        "id": "1",
+        "title": "Projet 1",
+        "description": "Description du projet 1",
+        "cover": 
+            "../../assets/portfolio/kasa.png",
+        "pictures": [
+            "../../assets/portfolio/kasa.png"
+        ]
+    },
+
+    {
+        "id": "2",
+        "title": "Projet 2",
+        "description": "Description du projet 2",
+        "cover": [
+            "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-1-1.jpg",
+            "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-1-2.jpg"
+        ],
+        "pictures": [
+            "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-1-2.jpg",
+            "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-1-1.jpg"
+        ]
+    },
+
+    {
+        "id": "3",
+        "title": "Projet 3",
+        "cover": "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-1-1.jpg",
+        "pictures": [
+            "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-1-1.jpg"
+        ]
+    },
+
+    {
+        "id": "4",
+        "title": "Projet 4",
+        "description": "Description du projet 4",
+        "cover": [
+            "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-1-1.jpg",
+            "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-1-2.jpg"
+        ],
+        "pictures": [
+            "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-1-2.jpg",
+            "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-1-1.jpg"
+        ]
+    },
+
+    {
+        "id": "5",
+        "title": "Projet 5",
+        "description": "Description du projet 5",
+        "image": "https://via.placeholder.com/150",
+        "link": "https://www.google.com"
+    },
+
+    {
+        "id": "6",
+        "title": "Projet 6",
+        "description": "Description du projet 6",
+        "image": "https://via.placeholder.com/150",
+        "link": "https://www.google.com"
+    }
+]

@@ -1,7 +1,7 @@
 // Contact.jsx
 //impot des composants
 import Header from '../../components/Header'
-// import Footer from '../../components/Footer'
+import Footer from '../../components/Footer'
 import styled from 'styled-components'
 import colors from '../../utils/style/colors'
 import { BsTelephone, BsEnvelope } from 'react-icons/bs'
@@ -83,7 +83,7 @@ export default function Contact () {
                     </div>
                 </div>
             </div>  
-        {/* <Footer /> */}
+        <Footer />
       </>
     </StyledContact>
   )
@@ -261,7 +261,7 @@ const StyledContact = styled.div`
               margin-bottom: 20px;
               padding: 10px;
               border-radius: 5px;
-              border: 1px solid #F0ACF1;
+              border: 1px solid ${colors.tertiary};
             }
           }
           /* CSS pour personnaliser les placeholders */

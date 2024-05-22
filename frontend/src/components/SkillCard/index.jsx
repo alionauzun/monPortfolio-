@@ -59,6 +59,7 @@ const StyledSkillCard = styled.div`
                 transition: 0.5s;
 
                 &.front {
+                    background: #fff;
                     position: relative;
                     transform-style: preserve-3d;
                     transition: transform 0.5s;
@@ -118,12 +119,12 @@ const StyledSkillCard = styled.div`
                     transition: transform 0.5s;
 
                     .iconTool {
-                        box-shadow: 0px 0px 8px 2px #A972FF;
+                        box-shadow: 0px 0px 8px 2px #9f94f1;
                         width: 50px;
                         height: 50px;
                         border-radius: 50%;
                         background-color: black;
-                        color: ${colors.primary};
+                        color: #9f94f1;
                         display: flex;
                         justify-content: center;
                         align-items: center;

@@ -9,7 +9,7 @@ const Blog = () => {
   useEffect(() => {
     const fetchArticles = async () => {
       try {
-        const response = await axios.get('/api/posts'); // Assurez-vous d'utiliser le bon endpoint pour récupérer les articles depuis votre backend
+        const response = await axios.get('/api/posts'); // utiliser le bon endpoint pour récupérer les articles depuis votre backend
         setArticles(response.data);
       } catch (error) {
         console.error('Erreur lors de la récupération des articles :', error);
