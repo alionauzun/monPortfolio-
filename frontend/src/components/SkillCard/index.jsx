@@ -107,7 +107,7 @@ const StyledSkillCard = styled.div`
                 }
 
                 &.back {
-                    background: ${colors.quaternary};
+                    background-color: ${colors.quaternary};
                     border-radius: 20px;
                     display: flex;
                     align-items: end;
@@ -123,8 +123,9 @@ const StyledSkillCard = styled.div`
                         width: 50px;
                         height: 50px;
                         border-radius: 50%;
-                        background-color: black;
+                        background-color: ${colors.quaternary};
                         color: #9f94f1;
+                        // color: #6c49de;
                         display: flex;
                         justify-content: center;
                         align-items: center;

@@ -124,6 +124,7 @@ export default function Header() {
 
 
 const StyledHeader = styled.header`
+      background-color: #00010B;
       font-family: 'Avenir Next', sans-serif;
       height: 75px;
       display: flex;

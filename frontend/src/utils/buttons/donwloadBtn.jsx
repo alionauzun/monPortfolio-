@@ -4,7 +4,7 @@ import CV from '../../assets/cv.pdf';
 function DownloadButton() {
     return (
         <StyledDownload>
-            <button className="Cv-btn">
+            {/* <button className="Cv-btn"> */}
             <a href={CV} target="_blank" rel="noreferrer">
                 <span className="folderContainer">
                   <svg
@@ -19,19 +19,6 @@ function DownloadButton() {
                         d="M0.29306 12.2478C0.133905 9.38186 2.41499 6.97059 5.28537 6.97059H30.419H58.1902C59.5751 6.97059 60.9288 6.55982 62.0802 5.79025L68.977 1.18034C70.1283 0.410771 71.482 0 72.8669 0H77H155.462C157.87 0 159.733 2.1129 159.43 4.50232L150.443 75.5023C150.19 77.5013 148.489 79 146.474 79H7.78403C5.66106 79 3.9079 77.3415 3.79019 75.2218L0.29306 12.2478Z"
                         fill="url(#paint0_linear_117_5)"
                       ></path>
-                    {/* <defs>
-                      <linearGradient
-                        id="paint0_linear_117_4"
-                        x1="0"
-                        y1="0"
-                        x2="72.93"
-                        y2="95.4804"
-                        gradientUnits="userSpaceOnUse"
-                      >
-                        <stop stopColor="#8F88C2"></stop>
-                        <stop offset="1" stopColor="#5C52A2"></stop>
-                      </linearGradient>
-                    </defs> */}
                   </svg>
                   <svg
                     className="filePage"
@@ -86,7 +73,7 @@ function DownloadButton() {
                 </span>
                 <p className="text">Mon CV</p>
             </a>
-            </button>
+            {/* </button> */}
 
         </StyledDownload>
     );
@@ -95,20 +82,13 @@ function DownloadButton() {
 export default DownloadButton;
 
 const StyledDownload = styled.section`
-.Cv-btn {
-  background-color: #000533;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 56px;
-  width: 170px;
-  border-radius: 3px;
-  border: 5px double #fff;
-  // padding: 10px 20px;
+a{
+  height: 46px;
+  width: 220px;
+  border: 5px double #E0DCFA;
   cursor: pointer;
   transition: all 0.3s;
-}
-a {
+
   text-decoration: none;
   display: flex;
   align-items: center;
@@ -147,22 +127,22 @@ a {
   transition: all 0.3s ease-out;
 }
 .text {
-  color: #fff;
+  color: #E0DCFA;
   font-size: 18px;
   font-weight: 600;
   letter-spacing: 0.5px;
   margin: 0;
 }
-.Cv-btn:hover .filePage {
+a:hover .filePage {
   transform: translateY(-5px);
 }
 // .Cv-btn:hover {
 //   background-color: #000533;
 // }
-.Cv-btn:active {
+a:active {
   transform: scale(0.95);
 }
-.Cv-btn:hover .fileFront {
+a:hover .fileFront {
   transform: rotateX(30deg);
 }
 `

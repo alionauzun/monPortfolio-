@@ -1,14 +1,11 @@
 //----------Code: Home page-------------
 import { useState } from 'react';
-// Importation de Tailwind CSS
-import 'tailwindcss/tailwind.css';
 
 //importation des composants
 import Header from '../../components/Header'
 import Banner from '../../components/Banner'
 import Footer from '../../components/Footer'
 import styled from 'styled-components'
-// import colors from '../../utils/style/colors'
 import imageDeveloppeuse from '../../assets/image_developpeuse.png'
 import SkillCard from '../../components/SkillCard'
 import DownloadButton from '../../utils/buttons/donwloadBtn'
@@ -21,8 +18,7 @@ import { FaDocker,FaSlack, FaGitlab, FaRegCheckCircle } from "react-icons/fa";
 import { DiJavascript1 } from "react-icons/di";
 import { GrMysql } from "react-icons/gr";
 
-
-//import image skils black
+//importation des image skils black
 import DatabaseBlack from '../../assets/skills/black/database1.png'
 import DevopsBlack from '../../assets/skills/black/devops1.png'
 import FrontendBlack from '../../assets/skills/black/frontend1.png'
@@ -42,19 +38,14 @@ function Home() {
     return (
         <StyledHome>
             <>
-                <div className='baner-home'>
-                    <Header />
-                    <Banner />
-                </div>
+                <Header />
+                <Banner />
 
                 <div className='selling-text'>
                     <div id='text'>
-                        <h2 className="transition-transform transform duration-1000 ease-out translate-x-[-100%] translate-y-[-100%] opacity-0 animate-fadeInUp">
+                        <h2>
                             Ma passion pour le développement web au service de vos projets numériques
                         </h2>
-                        <div className='Btn-donwload-cv'>
-                            <DownloadButton />
-                        </div>
                     </div>
                     <div id='list'>
                         <ul>
@@ -92,6 +83,9 @@ function Home() {
                             </li>
                         </ul>
                     </div>
+                    <div className='Btn-donwload-cv'>
+                        <DownloadButton />
+                    </div>
                 </div>
 
                 <div className='about'>
@@ -101,7 +95,7 @@ function Home() {
                             <p>Je suis une développeuse Full Stack junior basée à Oignies, Hauts-de-France, avec une passion pour le développement web et le design. Après avoir obtenu mon diplôme en développement web, je suis prête à relever de nouveaux défis professionnels et à contribuer à des projets numériques passionnants.
                             </p>
                             <p>
-                                Mon parcours d&apos;études en Moldavie et en France m&apos;a dotée d&apos;une solide formation et d&apos;une curiosité intellectuelle qui me pousse constamment à apprendre et à m&apos;améliorer. Mon objectif est de rejoindre une Entreprise de Services du Numérique (ESN) pour explorer tous les aspects du domaine, du design web à la gestion de projet.
+                                Mon parcours d&apos;études en Moldavie et en France m&apos;a dotée d&apos;une solide formation et d&apos;une curiosité intellectuelle qui me pousse constamment à apprendre et à m&apos;améliorer. Mon objectif est de rejoindre une Entreprise de Services du Numérique (ESN) basée à Lille pour explorer tous les aspects du domaine, du design web à la gestion de projet.
                             </p>
                             {expanded && (
                                 <>
@@ -115,14 +109,11 @@ function Home() {
                             )}
                         </div>
                         <figure>
-                            <img src={imageDeveloppeuse} alt='image developpeuse' />
+                            <img src={imageDeveloppeuse} alt="Développeuse" />
                         </figure>
                     </div>
-
-                    <div className='about-button'>
-                        <ReadMoreButton onClick={toggleExpand}>
-                            {expanded ? 'Réduire' : 'Lire la suite'}
-                        </ReadMoreButton>
+                    <div className="about-button">
+                        <ReadMoreButton expanded={expanded} onClick={toggleExpand} />
                     </div>
                 </div>
 
@@ -186,9 +177,10 @@ function Home() {
                     </ul>
                 </div>
 
+
                 <div className='contact'>
-                    <h2>Vous avez un projet ?</h2>
-                    <p>Je serais ravie de vous accompagner dans la réalisation de votre projet numérique. N&apos;hésitez pas à me contacter pour en discuter.</p>
+                    {/* <h2>Contact</h2> */}
+                    <p>Pour toute demande de renseignements, de collaboration ou simplement pour échanger des idées, n&apos;hésitez pas à me contacter. Je suis toujours ouverte aux nouvelles opportunités et prête à contribuer à des projets innovants.</p>
                 </div>
                 <Footer />
             </>
@@ -200,49 +192,42 @@ export default Home;
 
 // Styled Components
 const StyledHome = styled.div`
-.baner-home {
-    background-color: #00010B;
-}
 .selling-text {
     padding: 90px 40px;
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
     color: #f4f4f8;
 
     #text {
-        width: 40%;
+        width: 80%;
         padding-left: 10px;
         h2 {
             font: 600 54px 'Avenir Next', sans-serif;
+            text-align: center;
             letter-spacing: 1px;
-            line-height: 2;
+            line-height: 1.5;
             margin-top:0;
+            margin-bottom: 60px;
             @apply animate-fadeInUp; /* Apply Tailwind animation */
-        }
-
-        .Btn-donwload-cv {
-            display: flex;
-            justify-content: center;
-            margin-top: 40px;
         }
     }
 
     #list {
-        width: 50%;
     ul {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        gap: 40px;
+        gap: 60px;
         list-style-type: none;
         padding: 0 90px;
-        max-width: 1920px;
         }
         li {
             display: flex;
             flex-direction: column;
+            width: 46%;
             h4 {
                 font-size: 20px;
                 font-weight: 600;
@@ -256,7 +241,7 @@ const StyledHome = styled.div`
 
                 svg {
                     margin-right: 10px;
-                    color: #BBE57D;
+                    color: #85FDFF;
                     font-size: 24px;
                     float: left;
                 }
@@ -269,6 +254,11 @@ const StyledHome = styled.div`
                 color: #BCBCC8;
             }
         }
+    }
+    .Btn-donwload-cv {
+        display: flex;
+        justify-content: center;
+        margin-top: 60px;
     }
 }
 .about {
@@ -332,7 +322,6 @@ const StyledHome = styled.div`
         margin-bottom: 0;
         outline: none;
         cursor: pointer;
-        font-size: 16px;
         font-family: 'Avenir Next', sans-serif;
         color: #6c49de;
         }
@@ -368,13 +357,14 @@ const StyledHome = styled.div`
     }
 }
 .contact {
+    color: #f4f4f8;
     padding: 50px 0;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-around;
     text-align: justify;
-    background-color: #F4F4F6;
+    // background-color: #F4F4F6;
     h2 {
       margin-bottom: 20px;
       width: 36%;

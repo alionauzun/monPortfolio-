@@ -133,6 +133,7 @@ const videoIn = keyframes`
 
 const StyledBanner = styled.div`
     .banner {
+        background-color: #00010B;
         height: 800px;
         .wrapper-banner {
             // height: 700px;
@@ -168,7 +169,7 @@ const StyledBanner = styled.div`
                         margin-bottom: 20px;
                         span {
                             position: relative;
-                            color: #37fdff;
+                            color: #8cd3fe;
                         }
                         span::before {
                             content: '';
@@ -222,7 +223,7 @@ const StyledBanner = styled.div`
                         &:hover {
                             transform: translateY(-5px);
                             svg {
-                                color: #8f8f8f;
+                                color: #dce2fa;
                                 // color: #b7b3f9;
                             }
                         }

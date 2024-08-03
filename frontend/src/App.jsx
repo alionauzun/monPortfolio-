@@ -1,6 +1,5 @@
 // Dans ce fichier, je définis les routes de l'application et je crée le composant App qui est le composant racine--//
 
-import './App.css'
 //----importation des composants nécessaires à la configuration des routes de l'application----//
 import Home from './pages/Home';
 import Blog from './pages/Blog';

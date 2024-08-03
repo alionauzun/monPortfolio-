@@ -7,7 +7,6 @@ export default function ContactButton() {
             <Link to="/contact">
                 <button className="button">
                     <span className="transition"></span>
-                    {/* <span className="gradient"></span> */}
                     <span className="label">Contact</span>
                 </button>
             </Link>
@@ -22,39 +21,28 @@ button {
     font-size: 17px;
     padding:  12px 28px;
     font-weight: 500;
-    background-color: #c2d1ffbf;
-    color: #0544ff;
-    border: 1px solid #0544ff;
+    background-color: #0A1045;
+    color: #ADFEFF;
+    border: 0.5px solid #ADFEFF;
+    box-shadow: 0px 0px 7px 0px #ADFEFF;
     position: relative;
     overflow: hidden;
     border-radius: 0.6em;
     cursor: pointer;
+
+    &:hover{
+      box-shadow: 0px 0px 10px 2px #30fdff;
+    }
   }
-  
-//   .gradient {
-//     position: absolute;
-//     width: 100%;
-//     height: 100%;
-//     left: 0;
-//     top: 0;
-//     border-radius: 0.6em;
-//     margin-top: -0.25em;
-//     background-image: linear-gradient(
-//       rgba(0, 0, 0, 0),
-//       rgba(0, 0, 0, 0),
-//       rgba(0, 0, 0, 0.3)
-//     );
-//   }
-  
+
   .label {
     position: relative;
-    // top: -1px;
   }
   
   .transition {
     transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
     transition-duration: 500ms;
-    background-color: #C2D1FF;
+    background-color: #0F186B;
     border-radius: 9999px;
     width: 0;
     height: 0;
