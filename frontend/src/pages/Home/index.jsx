@@ -26,6 +26,11 @@ import BackendBlack from '../../assets/skills/black/backend1.png'
 import SeoBlack from '../../assets/skills/black/seo1.png'
 import WebdesignBlack from '../../assets/skills/black/uiux1.png'
 
+//
+import imageTechnicalSkills from '../../assets/skills/technical-skills.png'
+import imageRocket from '../../assets/skills/rocket.png'
+import imagePolyvalance from '../../assets/skills/polyvalence.png'
+import imageIdea from '../../assets/skills/idea.png'
 function Home() {
     // Ajouter un état pour suivre l'état d'expansion des paragraphes
     const [expanded, setExpanded] = useState(false);
@@ -50,34 +55,27 @@ function Home() {
                     <div id='list'>
                         <ul>
                             <li>
-                                <h4>Expertise technique
-                                    <span>
-                                        <FaRegCheckCircle />
-                                    </span>
-                                </h4>
+                                <img src={imageTechnicalSkills} alt="image Compétences techniques" />
+                                <h4>Expertise technique</h4>
                                 <p>Ma formation avec Openclassrooms m&apos;a dotée des compétences MERN nécessaires pour contribuer aux projets, assurant des solutions de qualité.</p>
                             </li>
                             <li>
+                                <img src={imagePolyvalance} alt="image Polyvalance" />
                                 <h4> Polyvalence
-                                    <span>
-                                        <FaRegCheckCircle />
-                                    </span>
                                 </h4>
                                 <p>En tant que développeuse fullstack, je suis capable de travailler sur toutes les facettes du développement web, facilitant la collaboration avec différentes équipes.</p>
                             </li>
                             <li>
-                                <h4>Passion et motivation
-                                    <span>
-                                        <FaRegCheckCircle />
-                                    </span>
-                                </h4>
+                                <img src={imageRocket} alt="image Passion et motivation" />
+                                <h4>Passion et motivation</h4>
                                 <p>Ma passion pour le développement web se traduit par un engagement fort envers les objectifs de l&apos;entreprise et une recherche continue d&apos;amélioration.</p>
                             </li>
                             <li>
+                                <img src={imageIdea} alt="image Innovation et valeur ajoutée" />
                                 <h4>Innovation et valeur ajoutée
-                                    <span>
+                                    {/* <span>
                                         <FaRegCheckCircle />
-                                    </span>
+                                    </span> */}
                                 </h4>
                                 <p> Je suis constamment à la pointe des tendances et des meilleures pratiques, ce qui me permet de proposer des solutions innovantes et de valeur pour les projets de l&apos;entreprise.</p>
                             </li>
@@ -177,7 +175,6 @@ function Home() {
                     </ul>
                 </div>
 
-
                 <div className='contact'>
                     {/* <h2>Contact</h2> */}
                     <p>Pour toute demande de renseignements, de collaboration ou simplement pour échanger des idées, n&apos;hésitez pas à me contacter. Je suis toujours ouverte aux nouvelles opportunités et prête à contribuer à des projets innovants.</p>
@@ -203,7 +200,6 @@ const StyledHome = styled.div`
 
     #text {
         width: 80%;
-        padding-left: 10px;
         h2 {
             font: 600 54px 'Avenir Next', sans-serif;
             text-align: center;
@@ -216,18 +212,24 @@ const StyledHome = styled.div`
     }
 
     #list {
+        width: 80%;
     ul {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        gap: 60px;
+        gap: 80px;
         list-style-type: none;
-        padding: 0 90px;
         }
         li {
             display: flex;
             flex-direction: column;
             width: 46%;
+
+            img {
+                width: 64px;
+                height: auto;
+                margin-bottom: 20px
+            }
             h4 {
                 font-size: 20px;
                 font-weight: 600;
@@ -268,8 +270,9 @@ const StyledHome = styled.div`
     flex-direction: column;
     justify-content: space-around;
     text-align: justify;
-    background-color: #fff;
-    border-top: #b3dfff solid 1px;
+    color: #f4f4f8;
+    // background-color: #fff;
+    // border-top: #b3dfff solid 1px;
     h2 {
       margin-bottom: 20px;
       width: 100%;
@@ -328,15 +331,16 @@ const StyledHome = styled.div`
     }
 }
   .skills {
-    border-top: #b5b3ee solid 1px;
+    // border-top: #b9e2fe solid 1px;
     padding: 90px 0;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
-    background-color: #E0DCFA;
-
+    // background-color: #e0f0fe;
+    
     h3 {
+        color: #f4f4f8;
         margin-top: 0;
         width: 40%;
         font: 600 64px 'Georgia', serif;
@@ -382,3 +386,5 @@ const StyledHome = styled.div`
     }
 }
 `;
+
+

@@ -64,7 +64,8 @@ const StyledSkillCard = styled.div`
                     transform-style: preserve-3d;
                     transition: transform 0.5s;
                     backface-visibility: hidden; 
-                    box-shadow: 0 0 20px 0 ${colors.primary};
+                    // box-shadow: 0 0 20px 0 #0b9aec;
+                    box-shadow: 0px 0px 7px 0px #ADFEFF;
 
                     img {
                         width: 50px;
@@ -81,7 +82,7 @@ const StyledSkillCard = styled.div`
                             display: block;
                             width: 20%;
                             height: 3px;
-                            background-color: ${colors.primary};
+                            background-color: #0b9aec;
                             margin-top: 5px;
                         }
                     }
@@ -107,7 +108,7 @@ const StyledSkillCard = styled.div`
                 }
 
                 &.back {
-                    background-color: ${colors.quaternary};
+                    background-color: #001324;
                     border-radius: 20px;
                     display: flex;
                     align-items: end;
@@ -119,13 +120,12 @@ const StyledSkillCard = styled.div`
                     transition: transform 0.5s;
 
                     .iconTool {
-                        box-shadow: 0px 0px 8px 2px #9f94f1;
+                        box-shadow: 0px 0px 8px 2px #35b3fb;
                         width: 50px;
                         height: 50px;
                         border-radius: 50%;
                         background-color: ${colors.quaternary};
-                        color: #9f94f1;
-                        // color: #6c49de;
+                        color: #35b3fb;
                         display: flex;
                         justify-content: center;
                         align-items: center;

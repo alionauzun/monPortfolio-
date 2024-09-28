@@ -72,10 +72,10 @@ const StyledFooter = styled.footer`
             button {
                 padding: 10px;
                 border-radius: 5px;
-                border: 1px solid ${colors.primary};
+                border: 1px solid #007aca;
                 box-shadow: 0px 0px 5px -3px  rgba(0,0,0,0.75);
                 color: white;
-                background-color: ${colors.primary};
+                background-color: #007aca;
                 cursor: pointer;
 
                 &:hover {

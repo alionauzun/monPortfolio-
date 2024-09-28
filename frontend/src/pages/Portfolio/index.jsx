@@ -1,10 +1,11 @@
 //impot des composants
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
-import CardSingleImg from '../../components/PortfolioCards/CardSingleImg';
-import CardTwinImg from '../../components/PortfolioCards/CardTwinImg';
+// import CardSingleImg from '../../components/PortfolioCards/CardSingleImg';
+// import CardTwinImg from '../../components/PortfolioCards/CardTwinImg';
 import styled from 'styled-components'
-import datas from '../../data/data'
+// import datas from '../../data/data'
+import Hexagon from '../../components/Hexagon'
 // import colors from '../../utils/style/colors'
 
 // import imageUneBonneBaladeRecto from '../../assets/portfolio/rectoUneBonneBalade.jpeg'
@@ -12,13 +13,28 @@ import datas from '../../data/data'
 // import imageKasa from '../../assets/portfolio/kasa.png'
 
 
+const projects = [
+    { id: 1, image: '/images/image1.jpg' },
+    { id: 2, image: '/images/image2.jpg' },
+    { id: 3, image: '/images/image3.jpg' },
+    { id: 4, image: '/images/image4.jpg' },
+    { id: 5, image: '/images/image5.jpg' },
+    { id: 6, image: '/images/image6.jpg' },
+    { id: 7, image: '/images/image7.jpg' },
+  ];
+
 export default function Portfolio() {
     return (
         <>
         <StyledPortfolio>
             <Header />
                 <StyledMain>
-                                <div className='portfolioPageContent'>
+                    <PortfolioWrapper>
+                        {projects.map(project => (
+                            <Hexagon key={project.id} image={project.image} />
+                        ))}
+                    </PortfolioWrapper>
+                                {/* <div className='portfolioPageContent'>
                                     <div className='card-group'>
                                     {datas.map(data => {
                                         return (
@@ -47,13 +63,21 @@ export default function Portfolio() {
                                         }
                                         )}
                                     </div>
-                                </div>                        
+                                </div>                         */}
                 </StyledMain>
             <Footer />
         </StyledPortfolio>
         </>
     );
 }
+
+
+const PortfolioWrapper = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+`;
 
 const StyledPortfolio = styled.div`
 width: 100%;
@@ -75,65 +99,4 @@ margin: 0px 20px;
 }
 `
 
-{/* <div className='portfolioPage'>
-<div className='portfolioPageContainer'>
-    <div className='portfolioPageContent'>
-        <div className='card-group'>
-            
-            <Link to="/projet/kasa" className='card'>
-                <h2>kasa</h2>
-                <div className='imgContainer'>
-                    <figure className='wrapper-single-img'>
-                        <img src={imageKasa} alt='projet kasa' className='single-img'/>
-                    </figure>
-                </div>
-            </Link>
-            
-            <div className='card'>
-                <h2>Balti habitat</h2>
-                {/* <p>Projet 1 description</p> */}
-{/* //                 <figure className='img-wrapper'>
-//                 <img src='https://via.placeholder.com/150' alt='projet 1' />
-//                 </figure>
-//             </div>
-//             <div className='card'> */}
-{/* //                 <h2>La panthere</h2> */}
-//                 {/* <p>Projet 1 description</p> */}
-{/* //                 <img src='https://via.placeholder.com/150' alt='projet 1' />
-//             </div>
-//             <div className='card'>
-//                 <h2>resto</h2> */}
-//                 {/* <p>Projet 1 description</p> */}
-{/* //                 <div className='imgContainer'>
-//                     <figure className='img-wrapper'>
-//                         <img src={imageUneBonneBaladeRecto} alt='projet 1' />
-//                         <img src={imageUneBonneBaladeVerso} alt='projet 1' />
-//                     </figure>
-//                 </div>
-//             </div>
-//         </div>
-//         <div className='card-group'>
-//             <div className='card'>
-//                 <h2>Une belle balade</h2> */}
-//                 {/* <p>Projet 1 description</p> */}
-{/* //                 <img src='https://via.placeholder.com/150' alt='projet 1' />
-//             </div>
-//             <div className='card'>
-//                 <h2>Projet 1</h2> */}
-//                 {/* <p>Projet 1 description</p> */}
-{/* //                 <img src='https://via.placeholder.com/150' alt='projet 1' />
-//             </div>
-//             <div className='card'>
-//                 <h2>Projet 1</h2> */}
-//                 {/* <p>Projet 1 description</p> */}
-{/* //                 <img src='https://via.placeholder.com/150' alt='projet 1' />
-//             </div>
-//             <div className='card'>
-//                 <h2>Projet 1</h2> */}
-//                 {/* <p>Projet 1 description</p> */}
-{/* //                 <img src='https://via.placeholder.com/150' alt='projet 1' />
-//             </div>
-//         </div>
-//     </div> */}
-{/* // </div>
-// </div> */} 
+ 
